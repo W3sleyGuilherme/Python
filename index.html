@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Python</title>
+
+    <style>
+           body {
+            background-image: url("/img/1026340.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            color: rgb(255, 255, 255);
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .container img {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            height: auto;
+        }
+
+        .container h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 30px;
+        }
+
+        .container h3 {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-top: 20px;
+        }
+
+        .container p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/img/logo_w.png" alt="Escola Profissional Do Fundão" title="Avatar" />
+    
+    <br><br><br><br>
+
+    <h1><b>1. Abrindo seu apetite</b></h1>
+    <h3>
+       <p>Se você trabalha muito com computadores, acabará encontrando alguma tarefa que gostaria de automatizar. Por exemplo, você pode querer fazer busca-e-troca em um grande número de arquivos de texto, ou renomear e reorganizar um monte de arquivos de fotos de uma maneira complicada. Talvez você gostaria de escrever um pequeno banco de dados personalizado, ou um aplicativo GUI especializado, ou um jogo simples.</p> 
+         <p>Se você é um desenvolvedor de software profissional, pode ter que trabalhar com várias bibliotecas C/C++/Java, mas o tradicional ciclo escrever/compilar/testar/recompilar é muito lento. Talvez você esteja escrevendo um conjunto de testes para uma biblioteca e está achando tedioso codificar os testes. Ou talvez você tenha escrito um programa que poderia utilizar uma linguagem de extensão, e você não quer conceber e implementar toda uma nova linguagem para sua aplicação.</p>
+            <p>Python é a linguagem para você.</p>
+                <p>Você pode escrever um script shell do Unix ou arquivos batch do Windows para algumas dessas tarefas, mas os scripts shell são melhores para mover arquivos e alterar dados de texto, não são adequados para aplicativos GUI ou jogos. Você pode escrever um programa C/C++/Java, mas pode levar muito tempo de desenvolvimento para obter até mesmo um primeiro rascunho de programa. O Python é mais simples de usar, está disponível nos sistemas operacionais Windows, macOS e Unix e ajudará você a terminar o trabalho mais rapidamente.</p>
+                    <p>Python é fácil de usar, sem deixar de ser uma linguagem de programação de verdade, oferecendo muito mais estruturação e suporte para programas extensos do que shell scripts ou arquivos de lote oferecem. Por outro lado, Python também oferece melhor verificação de erros do que C, e por ser uma linguagem de muito alto nível, ela possui tipos nativos de alto nível, tais como dicionários e vetores (arrays) flexíveis. Devido ao suporte nativo a uma variedade de tipos de dados, Python é aplicável a um domínio de problemas muito mais vasto do que Awk ou até mesmo Perl, ainda assim muitas tarefas são pelo menos tão fáceis em Python quanto nessas linguagens.</p>
+                        <p>Python permite que você organize seu programa em módulos que podem ser reutilizados em outros programas escritos em Python. A linguagem provê uma vasta coleção de módulos que podem ser utilizados como base para sua aplicação — ou como exemplos para estudo e aprofundamento. Alguns desses módulos implementam manipulação de arquivos, chamadas do sistema, sockets, e até mesmo acesso a bibliotecas de construção de interfaces gráficas, como Tk.</p>
+                            <p>Python é uma linguagem interpretada, por isso você pode economizar um tempo considerável durante o desenvolvimento, uma vez que não há necessidade de compilação e vinculação (linking). O interpretador pode ser usado interativamente, o que torna fácil experimentar diversas características da linguagem, escrever programas “descartáveis”, ou testar funções em um desenvolvimento debaixo para cima (bottom-up). É também uma útil calculadora de mesa.</p>
+                                <p>Python permite a escrita de programas compactos e legíveis. Programas escritos em Python são tipicamente mais curtos do que seus equivalentes em C, C++ ou Java, por diversas razões:</p>
+                                    <ul>
+                                        <li>os tipos de alto nível permitem que você expresse operações complexas em um único comando;</li>
+                                    <li>a definição de bloco é feita por indentação ao invés de marcadores de início e fim de bloco;</li>
+                                <li>não há necessidade de declaração de variáveis ou parâmetros formais;</li>
+                            </ul>
+                        <p>Python é extensível: se você sabe como programar em C, é fácil adicionar funções ou módulos diretamente no interpretador, seja para desempenhar operações críticas em máxima velocidade, ou para vincular programas Python a bibliotecas que só estejam disponíveis em formato binário (como uma biblioteca gráfica de terceiros). Uma vez que você tenha sido fisgado, você pode vincular o interpretador Python a uma aplicação escrita em C e utilizá-la como linguagem de comandos ou extensão para esta aplicação.</p>
+                    <p>A propósito, a linguagem foi batizada a partir do famoso programa da BBC “Monty Python’s Flying Circus” e não tem nada a ver com répteis. Fazer referências a citações do programa na documentação não é só permitido, como também é encorajado!</p>
+                <p>Agora que você está entusiasmado com Python, vai querer conhecê-la com mais detalhes. Partindo do princípio que a melhor maneira de aprender uma linguagem é usando-a, você está agora convidado a fazê-lo com este tutorial.</p>
+                                                    <p>No próximo capítulo, a mecânica de utilização do interpretador é explicada. Essa informação, ainda que mundana, é essencial para a experimentação dos exemplos apresentados mais tarde.</p>
+                                                        <p>O resto do tutorial introduz diversos aspectos do sistema e linguagem Python por intermédio de exemplos. Serão abordadas expressões simples, comandos, tipos, funções e módulos. Finalmente, serão explicados alguns conceitos avançados como exceções e classes definidas pelo usuário.</p>
+    </h3>
+    
+    
+    <h1>2.Utilizando o interpretador Python</h1>
+    <h3>2.1O interpretador Python é frequentemente instalado como /usr/local/bin/python3.11 nas máquinas onde está disponível; adicionando /usr/local/bin ao caminho de busca da shell de seu Unix torna-se possível iniciá-lo digitando o comando:<br>
+
+        <p>python3.11<br></p>
+            <p>no shell. 1 Considerando que a escolha do diretório onde o interpretador está é uma opção de instalação, outros locais são possíveis; verifique com seu guru local de Python ou administrador do sistema local. (Por exemplo, /usr/local/python é um local alternativo popular.)<br></p>
+        
+                <p> Em máquinas Windows onde você instalou Python a partir da Microsoft Store, o comando python3.11 estará disponível. Se você tem o lançador py.exe instalado, você pode usar o comando py. Veja Excursus: Configurando variáveis de ambiente para outras maneiras de executar o Python.</p><br>
+        
+                    <p>Digitando um caractere de fim-de-arquivo (Control-D no Unix, Control-Z no Windows) diretamente no prompt força o interpretador a sair com status de saída zero. Se isso não funcionar, você pode sair do interpretador digitando o seguinte comando: quit().</p><br>
+        
+                <p>Os recursos de edição de linha do interpretador incluem edição interativa, substituição de histórico e complemento de código, em sistemas com suporte à biblioteca GNU Readline. Talvez a verificação mais rápida para ver se o suporte à edição de linha de comando está disponível é digitando Control-P no primeiro prompt oferecido pelo Python. Se for emitido um bipe, você terá a edição da linha de comando; veja Apêndice Edição de entrada interativa e substituição de histórico para uma introdução às combinações. Se nada acontecer, ou se ^P aparecer na tela, a edição da linha de comando não está disponível; você só poderá usar backspace para remover caracteres da linha atual.</p><br>
+        
+            <p>O interpretador trabalha de forma semelhante a uma shell de Unix: quando chamado com a saída padrão conectada a um console de terminal, ele lê e executa comandos interativamente; quando chamado com um nome de arquivo como argumento, ou com redirecionamento da entrada padrão para ler um arquivo, o interpretador lê e executa o script contido no arquivo.</p><br>
+        
+        <p>Uma segunda forma de iniciar o interpretador é python -c comando [arg] ..., que executa uma ou mais instruções especificadas na posição comando, analogamente à opção de shell -c. Considerando que comandos Python frequentemente têm espaços em branco (ou outros caracteres que são especiais para a shell) é aconselhável que todo o comando esteja entre as aspas.</p><br>
+        
+    <p>Alguns módulos Python são também úteis como scripts. Estes podem ser chamados usando python -m módulo [arg] ... que executa o arquivo fonte do módulo como se você tivesse digitado seu caminho completo na linha de comando.</p><br>
+        
+        <p>Quando um arquivo de script é utilizado, às vezes é útil executá-lo e logo em seguida entrar em modo interativo. Isto pode ser feito acrescentando o argumento -i antes do nome do script.</p><br>
+        
+            <p>Todas as opções de linha de comando são descritas em Linha de comando e ambiente.</h3></p>
+                <p><h1>2.1.1. Passagem de argumentos</h1>
+                 <p><h3>Quando são de conhecimento do interpretador, o nome do script e demais argumentos da linha de comando da shell são acessíveis ao próprio script através da variável argv do módulo sys. Pode-se acessar essa lista executando import sys. Essa lista tem sempre ao menos um elemento; quando nenhum script ou argumento for passado para o interpretador, sys.argv[0] será uma string vazia. Quando o nome do script for '-' (significando entrada padrão), o conteúdo de sys.argv[0] será '-'. Quando for utilizado -c comando, sys.argv[0] conterá '-c'. Quando for utilizado -m módulo, sys.argv[0] conterá o caminho completo do módulo localizado. Opções especificadas após -c comando ou -m módulo não serão consumidas pelo interpretador mas deixadas em sys.argv para serem tratadas pelo comando ou módulo.
+                 </h3></p></p>
+                 <h1>2.1.2. Modo interativo</h1>
+                 <p><h3>Quando os comandos são lidos a partir do console, diz-se que o interpretador está em modo interativo. Nesse modo ele solicita um próximo comando através do prompt primário, tipicamente três sinais de maior (>>>); para linhas de continuação do comando atual, o prompt secundário padrão é formado por três pontos (...). O interpretador exibe uma mensagem de boas vindas, informando seu número de versão e um aviso de copyright antes de exibir o primeiro prompt:</h3></p>
+                 <h3><div class="highlight"><pre><span></span><span class="gp">$ </span>python3.11
+                    <span class="go">Python 3.11 (default, April 4 2021, 09:25:04)</span>
+                    <span class="go">[GCC 10.2.0] on linux</span>
+                    <span class="go">Type "help", "copyright", "credits" or "license" for more information.</span>
+                    <span class="go">&gt;&gt;&gt;</span>
+                    </pre></div></h3><br>
+
+           <p> <h3>Linhas de continuação são necessárias em construções multi-linha. Como exemplo, dê uma olhada nesse comando if:</h3></p>
+                <h3><div class="highlight-python3 notranslate" style="position: relative;"><div class="highlight"><span class="copybutton" title="Hide the prompts and output" style="cursor: pointer; position: absolute; top: 0px; right: 0px; border-color: rgb(170, 204, 153); border-style: solid; border-width: 1px; color: rgb(170, 204, 153); font-family: monospace; padding-left: 0.2em; padding-right: 0.2em; border-radius: 0px 3px 0px 0px;">&gt;&gt;&gt;</span><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">the_world_is_flat</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">the_world_is_flat</span><span class="p">:</span>
+                <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Be careful not to fall off!"</span><span class="p">)</span>
+                <span class="gp">...</span>
+                <span class="go">Be careful not to fall off!</span>
+                </pre></div>
+                </div></h3>
+            <h1>2.2. O interpretador e seu ambiente</h1>
+            <h2>2.2.1. Edição de código-fonte</h2>
+            <h3>Por padrão, arquivos fonte de Python são tratados com codificação UTF-8. Nessa codificação, caracteres de muitos idiomas no mundo podem ser usados simultaneamente em literais string, identificadores e comentários — embora a biblioteca padrão use apenas caracteres ASCII para identificadores, uma convenção que qualquer código portável deve seguir. Para exibir todos esses caracteres corretamente, seu editor deve reconhecer que o arquivo é UTF-8 e deve usar uma fonte com suporte a todos os caracteres no arquivo.<br>
+                Para declarar uma codificação diferente da padrão, uma linha de comentário especial deve ser adicionada como primeira linha do arquivo. A sintaxe é essa:</h3>
+            <h3><pre><span></span><span class="c1"># -*- coding: encoding -*-</span>
+            </pre></h3>
+        <h3><p>onde encoding é uma das codecs válidas com suporte do Python.<br></p>
+
+Por exemplo, para declarar que a codificação Windows-1252 deve ser usada, a primeira linha do seu arquivo fonte deve ser:</h3><br>
+<h3><pre><span></span><span class="c1"># -*- coding: cp1252 -*-</span>
+</pre></h3>
+            <h3>Uma exceção para a regra da primeira linha é quando o código-fonte inicia com uma linha com UNIX “shebang”. Nesse caso, a declaração de codificação deve ser adicionada como a segunda linha do arquivo. Por exemplo:</h3><br>
+            <h3><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+                <span class="c1"># -*- coding: cp1252 -*-</span>
+                </pre></h3>
+            <h1>3. Uma introdução informal ao Python</h1>
+        <h3><p>Nos exemplos seguintes, pode-se distinguir entrada e saída pela presença ou ausência dos prompts (>>> e …): para repetir o exemplo, você deve digitar tudo após o prompt, quando o mesmo aparece; linhas que não começarem com um prompt são na verdade as saídas geradas pelo interpretador. Observe que quando aparece uma linha contendo apenas o prompt secundário você deve digitar uma linha em branco; é assim que se encerra um comando de múltiplas linhas.</p><br>
+        <p>Você pode alternar a exibição de prompts e saída clicando em >>> no canto superior direito de uma caixa de exemplo. Se você ocultar os prompts e a saída para um exemplo, poderá copiar e colar facilmente as linhas de entrada no seu interpretador.</p><br>
+    <p>Muitos exemplos neste manual, mesmo aqueles inscritos na linha de comando interativa, incluem comentários. Comentários em Python começam com o caractere cerquilha ‘#’ e estende até o final da linha. Um comentário pode aparecer no inicio da linha ou após espaço em branco ou código, mas não dentro de uma string literal. O caracterer cerquilha dentro de uma string literal é apenas uma cerquilha. Como os comentários são para esclarecer o código e não são interpretados pelo Python, eles podem ser omitidos ao digitar exemplos.<br></p>
+    <div class="highlight"><pre><span></span><span class="c1"># this is the first comment</span>
+        <span class="n">spam</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># and this is the second comment</span>
+                  <span class="c1"># ... and now a third!</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="s2">"# This is not a comment because it's inside quotes."</span>
+        </pre></div></h3>
+        <h1>3.1. Usando Python como uma calculadora</h1>
+            <h3><p>Vamos experimentar alguns comandos simples em Python. Inicie o interpretador e aguarde o prompt primário, >>>. (Não deve demorar muito.)</p><br>
+                3.1.1. Números<br>
+                <p>O interpretador funciona como uma calculadora bem simples: você pode digitar uma expressão e o resultado será apresentado. A sintaxe de expressões é a usual: operadores +, -, * e / funcionam da mesma forma que em outras linguagens tradicionais (por exemplo, Pascal ou C); parênteses (()) podem ser usados para agrupar expressões. Por exemplo:<br></p>
+                <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+                    <span class="go">4</span>
+                    <span class="gp">&gt;&gt;&gt; </span><span class="mi">50</span> <span class="o">-</span> <span class="mi">5</span><span class="o">*</span><span class="mi">6</span>
+                    <span class="go">20</span>
+                    <span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="mi">50</span> <span class="o">-</span> <span class="mi">5</span><span class="o">*</span><span class="mi">6</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4</span>
+                    <span class="go">5.0</span>
+                    <span class="gp">&gt;&gt;&gt; </span><span class="mi">8</span> <span class="o">/</span> <span class="mi">5</span>  <span class="c1"># division always returns a floating point number</span>
+                    <span class="go">1.6</span>
+                    </pre><br>
+                <p>Os números inteiros (ex. 2, 4, 20) são do tipo int, aqueles com parte fracionária (ex. 5.0, 1.6) são do tipo float. Veremos mais sobre tipos numéricos posteriormente neste tutorial.</p><br>
+        <p>Divisão (/) sempre retorna ponto flutuante (float). Para fazer uma divisão pelo piso e receber um inteiro como resultado você pode usar o operador //; para calcular o resto você pode usar o %:</p><br>
+        <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">17</span> <span class="o">/</span> <span class="mi">3</span>  <span class="c1"># classic division returns a float</span>
+            <span class="go">5.666666666666667</span>
+            <span class="go">&gt;&gt;&gt;</span>
+            <span class="gp">&gt;&gt;&gt; </span><span class="mi">17</span> <span class="o">//</span> <span class="mi">3</span>  <span class="c1"># floor division discards the fractional part</span>
+            <span class="go">5</span>
+            <span class="gp">&gt;&gt;&gt; </span><span class="mi">17</span> <span class="o">%</span> <span class="mi">3</span>  <span class="c1"># the % operator returns the remainder of the division</span>
+            <span class="go">2</span>
+            <span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span>  <span class="c1"># floored quotient * divisor + remainder</span>
+            <span class="go">17</span>
+            </pre><br>
+            Com Python, é possível usar o operador ** para calcular potências 1:<br>
+            <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">5</span> <span class="o">**</span> <span class="mi">2</span>  <span class="c1"># 5 squared</span>
+                <span class="go">25</span>
+                <span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span> <span class="o">**</span> <span class="mi">7</span>  <span class="c1"># 2 to the power of 7</span>
+                <span class="go">128</span>
+                </pre>
+            <p>O sinal de igual ('=') é usado para atribuir um valor a uma variável. Depois de uma atribuição, nenhum resultado é exibido antes do próximo prompt:</p><br>
+            <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">width</span> <span class="o">=</span> <span class="mi">20</span>
+                <span class="gp">&gt;&gt;&gt; </span><span class="n">height</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">9</span>
+                <span class="gp">&gt;&gt;&gt; </span><span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
+                <span class="go">900</span>
+                </pre><br>
+                Se uma variável não é “definida” (não tem um valor atribuído), tentar utilizá-la gerará um erro:<br>
+                <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">n</span>  <span class="c1"># try to access an undefined variable</span>
+                    <span class="gt">Traceback (most recent call last):</span><span>
+                      File </span><span class="nb">"&lt;stdin&gt;"</span><span>, line </span><span class="m">1</span><span>, in </span><span class="n">&lt;module&gt;</span>
+                    <span class="gr">NameError</span><span>: </span><span class="n">name 'n' is not defined</span>
+                    </pre>
+                    Há suporte completo para ponto flutuante (float); operadores com operandos de diferentes tipos convertem o inteiro para ponto flutuante:<br>
+                <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span> <span class="o">*</span> <span class="mf">3.75</span> <span class="o">-</span> <span class="mi">1</span>
+                        <span class="go">14.0</span>
+                        </pre>
+            <p>No modo interativo, o valor da última expressão exibida é atribuída a variável _. Assim, ao utilizar Python como uma calculadora, fica mais fácil prosseguir com os cálculos, por exemplo:</p><br>
+                <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tax</span> <span class="o">=</span> <span class="mf">12.5</span> <span class="o">/</span> <span class="mi">100</span>
+                    <span class="gp">&gt;&gt;&gt; </span><span class="n">price</span> <span class="o">=</span> <span class="mf">100.50</span>
+                    <span class="gp">&gt;&gt;&gt; </span><span class="n">price</span> <span class="o">*</span> <span class="n">tax</span>
+                    <span class="go">12.5625</span>
+                    <span class="gp">&gt;&gt;&gt; </span><span class="n">price</span> <span class="o">+</span> <span class="n">_</span>
+                    <span class="go">113.0625</span>
+                    <span class="gp">&gt;&gt;&gt; </span><span class="nb">round</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+                    <span class="go">113.06</span>
+                </pre>
+            Essa variável especial deve ser tratada como somente para leitura pelo usuário. Nunca lhe atribua explicitamente um valor — do contrário, estaria criando uma outra variável (homônima) independente, que mascararia a variável especial com seu comportamento mágico.<br>
+                    Além de int e float, o Python suporta outros tipos de números, tais como Decimal e Fraction. O Python também possui suporte nativo a números complexos, e usa os sufixos j ou J para indicar a parte imaginária (por exemplo, 3+5j).<br>
+                     <p>3.1.2. Strings</p>
+                     Além de números, Python também pode manipular strings (sequências de caracteres), que podem ser expressas de diversas formas. Elas podem ser delimitadas por aspas simples ('...') ou duplas ("...") e teremos o mesmo resultado 2. \ pode ser usada para escapar aspas:<br>
+                     <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">'spam eggs'</span>  <span class="c1"># single quotes</span>
+                        <span class="go">'spam eggs'</span>
+                        <span class="gp">&gt;&gt;&gt; </span><span class="s1">'doesn</span><span class="se">\'</span><span class="s1">t'</span>  <span class="c1"># use \' to escape the single quote...</span>
+                        <span class="go">"doesn't"</span>
+                        <span class="gp">&gt;&gt;&gt; </span><span class="s2">"doesn't"</span>  <span class="c1"># ...or use double quotes instead</span>
+                        <span class="go">"doesn't"</span>
+                        <span class="gp">&gt;&gt;&gt; </span><span class="s1">'"Yes," they said.'</span>
+                        <span class="go">'"Yes," they said.'</span>
+                        <span class="gp">&gt;&gt;&gt; </span><span class="s2">"</span><span class="se">\"</span><span class="s2">Yes,</span><span class="se">\"</span><span class="s2"> they said."</span>
+                        <span class="go">'"Yes," they said.'</span>
+                        <span class="gp">&gt;&gt;&gt; </span><span class="s1">'"Isn</span><span class="se">\'</span><span class="s1">t," they said.'</span>
+                        <span class="go">'"Isn\'t," they said.'</span>
+                        </pre><br>
+                    Na interpretação interativa, a string de saída é delimitada com aspas e caracteres especiais são escapados com barras invertidas. Embora isso possa às vezes parecer diferente da entrada (as aspas podem mudar), as duas strings são equivalentes. A string é delimitada com aspas duplas se a string contiver uma única aspa simples e nenhuma aspa dupla, caso contrário, ela é delimitada com aspas simples. A função print() produz uma saída mais legível, ao omitir as aspas e ao imprimir caracteres escapados e especiais:<br>
+                <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">'"Isn</span><span class="se">\'</span><span class="s1">t," they said.'</span>
+                    <span class="go">'"Isn\'t," they said.'</span>
+                    <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">'"Isn</span><span class="se">\'</span><span class="s1">t," they said.'</span><span class="p">)</span>
+                    <span class="go">"Isn't," they said.</span>
+                    <span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s1">'First line.</span><span class="se">\n</span><span class="s1">Second line.'</span>  <span class="c1"># \n means newline</span>
+                    <span class="gp">&gt;&gt;&gt; </span><span class="n">s</span>  <span class="c1"># without print(), \n is included in the output</span>
+                    <span class="go">'First line.\nSecond line.'</span>
+                    <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># with print(), \n produces a new line</span>
+                    <span class="go">First line.</span>
+                    <span class="go">Second line.</span>
+                </pre>
+               <p> Se não quiseres que os caracteres sejam precedidos por \ para serem interpretados como caracteres especiais, poderás usar strings raw (N.d.T: “crua” ou sem processamento de caracteres de escape) adicionando um r antes da primeira aspa:</p><br>
+                <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">'C:\some</span><span class="se">\n</span><span class="s1">ame'</span><span class="p">)</span>  <span class="c1"># here \n means newline!</span>
+                    <span class="go">C:\some</span>
+                    <span class="go">ame</span>
+                    <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s1">'C:\some\name'</span><span class="p">)</span>  <span class="c1"># note the r before the quote</span>
+                    <span class="go">C:\some\name</span>
+                    </pre>
+                <p>Há um aspecto sutil nas strings raw: uma string raw não pode terminar em um número ímpar de caracteres \; consulte a entrada do FAQ para mais informações e soluções alternativas.<br></p>
+            <p>As strings literais podem abranger várias linhas. Uma maneira é usar as aspas triplas: """...""" ou '''...'''. O fim das linhas é incluído automaticamente na string, mas é possível evitar isso adicionando uma \ no final. O seguinte exemplo:</p><br>
+            <pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"""</span><span class="se">\</span>
+                <span class="s2">Usage: thingy [OPTIONS]</span>
+                <span class="s2">     -h                        Display this usage message</span>
+                <span class="s2">     -H hostname               Hostname to connect to</span>
+                <span class="s2">"""</span><span class="p">)</span>
+                </pre>
+                        produz a seguinte saída (observe que a linha inicial não está incluída):<br>    
+                        <pre><span></span>Usage: thingy [OPTIONS]
+                            -h                        Display this usage message
+                            -H hostname               Hostname to connect to
+                       </pre>
+                       Strings podem ser concatenadas (coladas) com o operador +, e repetidas com *:<br>
+                         <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># 3 times 'un', followed by 'ium'</span>
+                            <span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">*</span> <span class="s1">'un'</span> <span class="o">+</span> <span class="s1">'ium'</span>
+                            <span class="go">'unununium'</span>
+                            </pre>
+                            <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># 3 times 'un', followed by 'ium'</span>
+                                <span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">*</span> <span class="s1">'un'</span> <span class="o">+</span> <span class="s1">'ium'</span>
+                                <span class="go">'unununium'</span>
+                                </pre><br>
+                                <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">'Py'</span> <span class="s1">'thon'</span>
+                                    <span class="go">'Python'</span>
+                                    </pre>
+                                    <p>Esse recurso é particularmente útil quando você quer quebrar strings longas<br></p>
+                                                     <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">text</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'Put several strings within parentheses '</span>
+                                                            <span class="gp">... </span>        <span class="s1">'to have them joined together.'</span><span class="p">)</span>
+                                                            <span class="gp">&gt;&gt;&gt; </span><span class="n">text</span>
+                                                            <span class="go">'Put several strings within parentheses to have them joined together.'</span>
+                                                            </pre>
+                                                        Isso só funciona com duas strings literais, não com variáveis ou expressões:<br>
+                                                        <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">prefix</span> <span class="o">=</span> <span class="s1">'Py'</span>
+                                                            <span class="gp">&gt;&gt;&gt; </span><span class="n">prefix</span> <span class="s1">'thon'</span>  <span class="c1"># can't concatenate a variable and a string literal</span>
+                                                              File <span class="nb">"&lt;stdin&gt;"</span>, line <span class="m">1</span>
+                                                                <span class="n">prefix</span> <span class="s1">'thon'</span>
+                                                                       <span class="pm">^^^^^^</span>
+                                                            <span class="gr">SyntaxError</span>: <span class="n">invalid syntax</span>
+                                                            <span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="s1">'un'</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span> <span class="s1">'ium'</span>
+                                                              File <span class="nb">"&lt;stdin&gt;"</span>, line <span class="m">1</span>
+                                                                <span class="p">(</span><span class="s1">'un'</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span> <span class="s1">'ium'</span>
+                                                                           <span class="pm">^^^^^</span>
+                                                            <span class="gr">SyntaxError</span>: <span class="n">invalid syntax</span>
+                                                            </pre>                                                    </pre>
+                                                    Se você quiser concatenar variáveis ou uma variável e uma literal, use +:<br>
+                                                <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">prefix</span> <span class="o">+</span> <span class="s1">'thon'</span>
+                                                    <span class="go">'Python'</span>
+                                                        </pre>
+                                        <p>As strings podem ser indexadas (subscritas), com o primeiro caractere como índice 0. Não existe um tipo específico para caracteres; um caractere é simplesmente uma string cujo tamanho é 1:</p><br>
+                                        <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="s1">'Python'</span>
+                                            <span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># character in position 0</span>
+                                            <span class="go">'P'</span>
+                                            <span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>  <span class="c1"># character in position 5</span>
+                                            <span class="go">'n'</span>
+                                            </pre>
+                                                    Índices também podem ser números negativos para iniciar a contagem pela direita:<br>
+                                            <pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># last character</span>
+                                                <span class="go">'n'</span>
+                                                <span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># second-last character</span>
+                                                <span class="go">'o'</span>
+                                                <span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="o">-</span><span class="mi">6</span><span class="p">]</span>
+                                                <span class="go">'P'</span>
+                                                </pre>
+                                            <p>Note que dado que -0 é o mesmo que 0, índices negativos começam em -1.<br></p>
+                                       <p> Além da indexação, o fatiamento também é permitido. Embora a indexação seja usada para obter caracteres individuais, fatiar permite que você obtenha substring:</p>
+                                       <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># characters from position 0 (included) to 2 (excluded)</span>
+                                        <span class="go">'Py'</span>
+                                        <span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>  <span class="c1"># characters from position 2 (included) to 5 (excluded)</span>
+                                        <span class="go">'tho'</span>
+                                        </pre></p>
+                                    <p>Os índices do fatiamento possuem padrões úteis; um primeiro índice omitido padrão é zero, um segundo índice omitido é por padrão o tamanho da string sendo fatiada:</p>
+                                    <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>   <span class="c1"># character from the beginning to position 2 (excluded)</span>
+                                        <span class="go">'Py'</span>
+                                        <span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>   <span class="c1"># characters from position 4 (included) to the end</span>
+                                        <span class="go">'on'</span>
+                                        <span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>  <span class="c1"># characters from the second-last (included) to the end</span>
+                                        <span class="go">'on'</span>
+                                        </pre></p>
+                                <p>Observe como o início sempre está incluído, e o fim sempre é excluído. Isso garante que s[:i] + s[i:] seja sempre igual a s:</p>     
+                        <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">word</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+                            <span class="go">'Python'</span>
+                            <span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">word</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>
+                            <span class="go">'Python'</span>
+                            </pre></p> 
+                    <p>Uma maneira de lembrar como fatias funcionam é pensar que os índices indicam posições entre caracteres, onde a borda esquerda do primeiro caractere é 0. Assim, a borda direita do último caractere de uma string de comprimento n tem índice n, por exemplo:
+                </p>
+            <pre><span></span> <span class="o">+---+---+---+---+---+---+</span>
+                <span class="o">|</span> <span class="n">P</span> <span class="o">|</span> <span class="n">y</span> <span class="o">|</span> <span class="n">t</span> <span class="o">|</span> <span class="n">h</span> <span class="o">|</span> <span class="n">o</span> <span class="o">|</span> <span class="n">n</span> <span class="o">|</span>
+                <span class="o">+---+---+---+---+---+---+</span>
+                <span class="mi">0</span>   <span class="mi">1</span>   <span class="mi">2</span>   <span class="mi">3</span>   <span class="mi">4</span>   <span class="mi">5</span>   <span class="mi">6</span>
+                <span class="o">-</span><span class="mi">6</span>  <span class="o">-</span><span class="mi">5</span>  <span class="o">-</span><span class="mi">4</span>  <span class="o">-</span><span class="mi">3</span>  <span class="o">-</span><span class="mi">2</span>  <span class="o">-</span><span class="mi">1</span>
+                </pre>
+        <p>A primeira fileira de números indica a posição dos índices 0…6 na string; a segunda fileira indica a posição dos respectivos índices negativos. Uma fatia de i a j consiste em todos os caracteres entre as bordas i e j, respectivamente.</p>
+    <p>Para índices positivos, o comprimento da fatia é a diferença entre os índices, se ambos estão dentro dos limites da string. Por exemplo, o comprimento de word[1:3] é 2.</p>
+<p>A tentativa de usar um índice que seja muito grande resultará em um erro:</p>                
+    <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">42</span><span class="p">]</span>  <span class="c1"># the word only has 6 characters</span>
+        <span class="gt">Traceback (most recent call last):</span><span>
+          File </span><span class="nb">"&lt;stdin&gt;"</span><span>, line </span><span class="m">1</span><span>, in </span><span class="n">&lt;module&gt;</span>
+        <span class="gr">IndexError</span><span>: </span><span class="n">string index out of range</span>
+        </pre></p>
+            <p>No entanto, os índices de fatiamento fora do alcance são tratados graciosamente (N.d.T: o termo original “gracefully” indica robustez no tratamento de erros) quando usados para fatiamento. Um índice maior que o comprimento é trocado pelo comprimento, um limite superior menor que o limite inferior produz uma string vazia:</p>
+                 <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">42</span><span class="p">]</span>
+                    <span class="go">'on'</span>
+                    <span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">42</span><span class="p">:]</span>
+                    <span class="go">''</span>
+                    </pre></p>    
+                         <p>As strings do Python não podem ser alteradas — uma string é imutável. Portanto, atribuir a uma posição indexada na sequência resulta em um erro:</p>
+                            <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'J'</span>
+                                <span class="gt">Traceback (most recent call last):</span><span>
+                                  File </span><span class="nb">"&lt;stdin&gt;"</span><span>, line </span><span class="m">1</span><span>, in </span><span class="n">&lt;module&gt;</span>
+                                <span class="gr">TypeError</span><span>: </span><span class="n">'str' object does not support item assignment</span>
+                                <span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">=</span> <span class="s1">'py'</span>
+                                <span class="gt">Traceback (most recent call last):</span><span>
+                                  File </span><span class="nb">"&lt;stdin&gt;"</span><span>, line </span><span class="m">1</span><span>, in </span><span class="n">&lt;module&gt;</span>
+                                <span class="gr">TypeError</span><span>: </span><span class="n">'str' object does not support item assignment</span>
+                                </pre></p>
+                                    <p>Se você precisar de uma string diferente, deverá criar uma nova:</p>
+                                        <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">'J'</span> <span class="o">+</span> <span class="n">word</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+                                            <span class="go">'Jython'</span>
+                                            <span class="gp">&gt;&gt;&gt; </span><span class="n">word</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="s1">'py'</span>
+                                            <span class="go">'Pypy'</span>
+                                            </pre></p>
+                                                <p>A função embutida len() devolve o comprimento de uma string:</p>
+                                                    <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s1">'supercalifragilisticexpialidocious'</span>
+                                                        <span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+                                                        <span class="go">34</span>
+                                                        </pre></p>
+                                                    <p>3.1.3. Listas</p><br>
+                                                <p>Python inclui diversas estruturas de dados compostas, usadas para agrupar outros valores. A mais versátil é list (lista), que pode ser escrita como uma lista de valores (itens) separados por vírgula, entre colchetes. Os valores contidos na lista não precisam ser todos do mesmo tipo.</p>
+                                            <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">]</span>
+                                                <span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span>
+                                                <span class="go">[1, 4, 9, 16, 25]</span>
+                                                </pre></p>
+                                        <p>Como strings (e todos os tipos embutidos de sequência), listas pode ser indexados e fatiados:</p>
+                                    <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># indexing returns the item</span>
+                                        <span class="go">1</span>
+                                        <span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                                        <span class="go">25</span>
+                                        <span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span>  <span class="c1"># slicing returns a new list</span>
+                                        <span class="go">[9, 16, 25]</span>
+                                        </pre></p>
+                                <p>Todas as operações de fatiamento devolvem uma nova lista contendo os elementos solicitados. Isso significa que o seguinte fatiamento devolve uma cópia rasa da lista:</p>
+                            <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span><span class="p">[:]</span>
+                                <span class="go">[1, 4, 9, 16, 25]</span>
+                                </pre></p>
+                        <p>As listas também suportam operações como concatenação:</p>
+                    <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">squares</span> <span class="o">+</span> <span class="p">[</span><span class="mi">36</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">81</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
+                        <span class="go">[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</span>
+                        </pre></p>
+                <p>Diferentemente de strings, que são imutáveis, listas são mutáveis, ou seja, é possível alterar elementos individuais de uma lista:</p>
+            <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cubes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">125</span><span class="p">]</span>  <span class="c1"># something's wrong here</span>
+                <span class="gp">&gt;&gt;&gt; </span><span class="mi">4</span> <span class="o">**</span> <span class="mi">3</span>  <span class="c1"># the cube of 4 is 64, not 65!</span>
+                <span class="go">64</span>
+                <span class="gp">&gt;&gt;&gt; </span><span class="n">cubes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">64</span>  <span class="c1"># replace the wrong value</span>
+                <span class="gp">&gt;&gt;&gt; </span><span class="n">cubes</span>
+                <span class="go">[1, 8, 27, 64, 125]</span>
+                </pre></p>
+        <p>Você também pode adicionar novos itens no final da lista, usando o método append() (estudaremos mais a respeito dos métodos posteriormente):</p>
+    <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cubes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">216</span><span class="p">)</span>  <span class="c1"># add the cube of 6</span>
+        <span class="gp">&gt;&gt;&gt; </span><span class="n">cubes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">7</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span>  <span class="c1"># and the cube of 7</span>
+        <span class="gp">&gt;&gt;&gt; </span><span class="n">cubes</span>
+        <span class="go">[1, 8, 27, 64, 125, 216, 343]</span>
+        </pre></p>
+<p>Atribuição a fatias também é possível, e isso pode até alterar o tamanho da lista ou remover todos os itens dela:</p>
+    <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">,</span> <span class="s1">'d'</span><span class="p">,</span> <span class="s1">'e'</span><span class="p">,</span> <span class="s1">'f'</span><span class="p">,</span> <span class="s1">'g'</span><span class="p">]</span>
+        <span class="gp">&gt;&gt;&gt; </span><span class="n">letters</span>
+        <span class="go">['a', 'b', 'c', 'd', 'e', 'f', 'g']</span>
+        <span class="gp">&gt;&gt;&gt; </span><span class="c1"># replace some values</span>
+        <span class="gp">&gt;&gt;&gt; </span><span class="n">letters</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'C'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">]</span>
+        <span class="gp">&gt;&gt;&gt; </span><span class="n">letters</span>
+        <span class="go">['a', 'b', 'C', 'D', 'E', 'f', 'g']</span>
+        <span class="gp">&gt;&gt;&gt; </span><span class="c1"># now remove them</span>
+        <span class="gp">&gt;&gt;&gt; </span><span class="n">letters</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="gp">&gt;&gt;&gt; </span><span class="n">letters</span>
+        <span class="go">['a', 'b', 'f', 'g']</span>
+        <span class="gp">&gt;&gt;&gt; </span><span class="c1"># clear the list by replacing all the elements with an empty list</span>
+        <span class="gp">&gt;&gt;&gt; </span><span class="n">letters</span><span class="p">[:]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="gp">&gt;&gt;&gt; </span><span class="n">letters</span>
+        <span class="go">[]</span>
+        </pre></p>
+            <p>A função embutida len() também se aplica a listas:</p>
+                <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">,</span> <span class="s1">'d'</span><span class="p">]</span>
+                    <span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">letters</span><span class="p">)</span>
+                    <span class="go">4</span>
+                    </pre></p>
+                        <p>É possível aninhar listas (criar listas contendo outras listas), por exemplo:</p>
+                            <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">]</span>
+                                <span class="gp">&gt;&gt;&gt; </span><span class="n">n</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+                                <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="p">]</span>
+                                <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
+                                <span class="go">[['a', 'b', 'c'], [1, 2, 3]]</span>
+                                <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                                <span class="go">['a', 'b', 'c']</span>
+                                <span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+                                <span class="go">'b'</span>
+                                </pre></p>
+        </h3>
+        <p><h2>3.2. Primeiros passos para a programação</h2></p>
+    <h3>
+        <p>Claro, podemos usar o Python para tarefas mais complicadas do que somar 2+2. Por exemplo, podemos escrever o início da sequência de Fibonacci assim:</p>
+            <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># Fibonacci series:</span>
+                <span class="gp">... </span><span class="c1"># the sum of two elements defines the next</span>
+                <span class="gp">... </span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+                <span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+                <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+                <span class="gp">... </span>    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+                <span class="gp">...</span>
+                <span class="go">0</span>
+                <span class="go">1</span>
+                <span class="go">1</span>
+                <span class="go">2</span>
+                <span class="go">3</span>
+                <span class="go">5</span>
+                <span class="go">8</span>
+            </pre></p>
+                <p>Este exemplo introduz diversas características ainda não mencionadas.</p><br>
+                    <ul>
+                        <li>A primeira linha contém uma atribuição múltipla: as variáveis a e b recebem simultaneamente os novos valores 0 e 1. Na última linha há outro exemplo de atribuição múltipla demonstrando que expressões do lado direito são sempre avaliadas primeiro, antes da atribuição. As expressões do lado direito são avaliadas da esquerda para a direita.
+                        </li>
+                        <li>O laço de repetição while executa enquanto a condição (aqui: a < 10) permanece verdadeira. Em Python, como em C, qualquer valor inteiro que não seja zero é considerado verdadeiro; zero é considerado falso. A condição pode também ser uma cadeia de caracteres ou uma lista, ou qualquer sequência; qualquer coisa com um tamanho maior que zero é verdadeiro, enquanto sequências vazias são falsas. O teste usado no exemplo é uma comparação simples. Os operadores padrões de comparação são os mesmos de C: < (menor que), > (maior que), == (igual), <= (menor ou igual), >= (maior ou igual) e != (diferente).
+                        </li>
+                        <li>O corpo do laço é indentado: indentação em Python é a maneira de agrupar comandos em blocos. No console interativo padrão você terá que digitar tab ou espaços para indentar cada linha. Na prática você vai preparar scripts Python mais complicados em um editor de texto; a maioria dos editores de texto tem facilidades de indentação automática. Quando um comando composto é digitado interativamente, deve ser finalizado por uma linha em branco (já que o interpretador não tem como adivinhar qual é a última linha do comando). Observe que toda linha de um mesmo bloco de comandos deve ter a mesma indentação.
+                        </li>
+                        <li>A função print() escreve o valor dos argumentos fornecidos. É diferente de apenas escrever a expressão no interpretador (como fizemos anteriormente nos exemplos da calculadora) pela forma como lida com múltiplos argumentos, quantidades de ponto flutuante e strings. As strings são impressas sem aspas, e um espaço é inserido entre os itens, assim você pode formatar bem o resultado, dessa forma:
+                        </li>
+                    </ul>
+                            <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="mi">256</span><span class="o">*</span><span class="mi">256</span>
+                                <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">'The value of i is'</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+                                <span class="go">The value of i is 65536</span>
+                                </pre></p>
+                                     <p>O argumento end pode ser usado para evitar uma nova linha após a saída ou finalizar a saída com uma string diferente:</p>
+                                        <p><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+                                            <span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">:</span>
+                                            <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">','</span><span class="p">)</span>
+                                            <span class="gp">... </span>    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+                                            <span class="gp">...</span>
+                                            <span class="go">0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,</span>
+                                            </pre></p>
+    
+    
+    </h3></div>
+</body>
+</html>
+        
+            
+
+
